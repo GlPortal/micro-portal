@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(jumpers)
+set(CMAKE_CXX_STANDARD 14)  
+cmake_policy(SET CMP0072 NEW)
+find_package(FLTK REQUIRED)
+include_directories(${FLTK_INCLUDE_DIRS})
+add_executable(jumpers main.cpp)
+target_link_libraries(jumpers ${FLTK_LIBRARIES})
